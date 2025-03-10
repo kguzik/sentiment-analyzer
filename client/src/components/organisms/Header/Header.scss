@@ -1,0 +1,11 @@
+@use '../../../styles/variables.scss' as *;
+
+.header {
+  background-color: $grey;
+  padding: 20px;
+
+  &__title {
+    text-transform: uppercase;
+    margin: 0;
+  }
+}

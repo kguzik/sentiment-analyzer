@@ -1,0 +1,13 @@
+@use '../../../styles/variables.scss' as *;
+
+.footer {
+  background-color: $grey;
+  padding: 16px 0;
+  text-align: center;
+  margin-top: auto;
+
+  &__content {
+    color: $darkGrey;
+    margin-bottom: 0;
+  }
+}

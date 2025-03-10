@@ -1,0 +1,130 @@
+@use 'normalize.css';
+@use './variables.scss' as *;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.5;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  width: 100%;
+  max-width: 720px;
+  padding: 0 20px;
+  margin: 0 auto;
+
+  @include media-breakpoint-up(desktop) {
+    max-width: 960px;
+    padding: 0 32px;
+  }
+
+  @include media-breakpoint-up(large-desktop) {
+    max-width: 1440px;
+  }
+}
+
+p {
+  font-size: 16px;
+  line-height: 24px;
+  margin-top: 0;
+
+  @include media-breakpoint-up(desktop) {
+    font-size: 18px;
+    line-height: 29px;
+  }
+}
+
+.text-small {
+  font-size: 14px;
+  line-height: 21px;
+
+  @include media-breakpoint-up(desktop) {
+    font-size: 15px;
+    line-height: 25px;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 29px;
+  line-height: 35px;
+
+  @include media-breakpoint-up(desktop) {
+    font-size: 45px;
+    line-height: 51px;
+  }
+}
+
+h3 {
+  font-size: 23px;
+  line-height: 28px;
+
+  @include media-breakpoint-up(desktop) {
+    font-size: 31px;
+    line-height: 36px;
+  }
+}
+
+.error-message {
+  color: $red;
+  margin: 10px 0 0;
+  font-size: 12px;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+.gradient-text {
+  animation: rainbow 2s ease-in-out infinite;
+  transition: color 0.2s ease-in-out;
+  color: rgba($black, 0);
+
+  &--green {
+    background: linear-gradient(to right, #1b5e20, #4caf50, #a5d6a7);
+    background-size: 200% 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+  }
+
+  &--red {
+    background: linear-gradient(to right, #b71c1c, #f44336, #ff8a80);
+    background-size: 200% 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+  }
+}
+
+@keyframes rainbow {
+  0% {
+    background-position: left;
+  }
+  50% {
+    background-position: right;
+  }
+  100% {
+    background-position: left;
+  }
+}

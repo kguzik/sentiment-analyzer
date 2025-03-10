@@ -1,0 +1,38 @@
+@use 'sass:map';
+
+// Colors
+$primary-color: #447953;
+$secondary-color: #699475;
+$white: #ffffff;
+$black: #000000;
+$grey: #f5f5f5;
+$darkGrey: #767676;
+$red: #f02a3e;
+
+// Transitions
+$defaultTransition: 0.3s ease;
+
+// Box shadow
+$box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+// Breakpoints
+$breakpoints: (
+  tablet: 768px,
+  desktop: 992px,
+  large-desktop: 1200px,
+);
+
+@function breakpoint-min($name) {
+  @return map.get($breakpoints, $name);
+}
+
+@mixin media-breakpoint-up($name) {
+  $min: breakpoint-min($name);
+  @if $min {
+    @media (min-width: $min) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}

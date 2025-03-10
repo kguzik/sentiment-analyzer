@@ -1,0 +1,82 @@
+@use '../../../styles/variables.scss' as *;
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba($black, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+  overflow: hidden;
+
+  &__content {
+    background: $white;
+    border-radius: 8px;
+    position: relative;
+    max-width: 600px;
+    width: 90%;
+    box-shadow: $box-shadow;
+    max-height: 80dvh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__content-wrapper {
+    padding: 40px 30px;
+    overflow-y: auto;
+    flex: 1;
+    max-height: 100%;
+    text-align: center;
+  }
+
+  &__close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 24px;
+    height: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+
+    span {
+      position: absolute;
+      width: 20px;
+      height: 2px;
+      background-color: $darkGrey;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(-45deg);
+      transition: background-color $defaultTransition;
+
+      &:nth-child(1) {
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+    }
+
+    &:hover span {
+      background-color: $primary-color;
+    }
+  }
+}
+
+.sentiment {
+  &__icon {
+    font-size: 48px;
+    margin: 0 0 10px;
+    position: relative;
+    z-index: 99;
+  }
+
+  &__label {
+    display: inline-block;
+    margin-bottom: 8px;
+    font-weight: 800;
+    letter-spacing: 0.2px;
+  }
+}
