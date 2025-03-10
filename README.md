@@ -4,7 +4,7 @@ This is a full-stack application built with modern web technologies, featuring a
 
 ## Technologies Used
 
-### Frontend (Client)
+### Frontend (client)
 
 - React 19
 - TypeScript
@@ -13,12 +13,11 @@ This is a full-stack application built with modern web technologies, featuring a
 - SASS for styling
 - Jest & React Testing Library for testing
 
-### Backend (Server)
+### Backend (server)
 
 - Node.js with Express
 - TypeScript
 - GraphQL with express-graphql
-- CORS for cross-origin resource sharing
 
 ### Development Tools (Root Level)
 
