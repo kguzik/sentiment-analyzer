@@ -75,8 +75,6 @@ This command will install dependencies for:
    - Navigate to the server directory
    - Copy `.env.example` to create `.env` file:
 
-Note: For recruitment purposes, I left the API key in `.env.example` to make testing easier. However, I know that this is not a secure practice and should never be done in production environments.
-
 ## Running the Application
 
 ### Development Mode
